@@ -1,0 +1,19 @@
+v1.0 working correctly, size is too large, changes need to be made to reduce size.
+
+Changelog:
+1) Removing conio.h doesn't help in reducing filesize
+2) using -g during compilation INCREASES file size
+3) (EXE-Packing) upx managed to decrease filesize from 55 to 41 kb
+4) (EXE-Packing) --best had no effect.
+5) (EXE-Packing) --ultra-brute had no effect
+6) (GCC Compiler Flags) -s reduces filesize from 55 KB to 17 Kb (16896 Bytes) (69% Reduction)
+7) (EXE-Packing) New exe file was reduced from 16896 to 8704 bytes (51.52% Compression)
+8) (EXE-Packing) New exe file was not affected by --best, --ultra-brute, --overlay=strip
+9) (TCC) Using TCC led to Compilation of a file which was 4.5 kb in size
+10) (TCC+ EXE-Packing) After using UPX for TCC file, size dropped to 3072 bytes.
+11) (TCC+ EXE-Packing) --all-filters --all-methods upx flag did not work
+12) (TCC) Using -Wl,--section-alignment,16,--file-alignment,16 dropped filesize to 3,392 bytes, but now exe won't work
+13) 
+
+
+
